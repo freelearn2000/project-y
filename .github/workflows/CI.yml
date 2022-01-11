@@ -1,0 +1,28 @@
+name: CI
+on:
+ pull_request:
+  branches: [develop]
+ push: 
+  branches: [develop]
+  
+jobs:
+  build:
+    name: Build 
+    runs-on: ubuntu-latest
+    
+
+    steps:
+    - name: Checkout master from repository
+      uses: actions/checkout@master
+    
+    - name: 'Build project'
+      run: echo "Build the project"
+      
+    - name: 'Install dependencies'
+      run: echo "install dependencies"
+      
+    - name: 'Code Analysis'
+      run: echo "code analysis"
+      
+    - name: 'Run test'
+      run: echo "run test"
