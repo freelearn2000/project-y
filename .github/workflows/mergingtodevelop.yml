@@ -24,9 +24,14 @@ jobs:
       with:
        node-version: ${{ env.NODE_VERSION }}
 
-    - name: Run npm install, compile
-      run: |
-        echo "npm install"
+    - name: 'Install dependencies'
+      run: echo "install dependencies"
+      
+    - name: 'Code Analysis'
+      run: echo "code analysis"
+      
+    - name: 'Run test'
+      run: echo "run test"
     
         
     - name: 'Build project'
